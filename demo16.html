@@ -1,0 +1,43 @@
+<!-- 事件 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+<div id="box1"></div>
+
+<script type="text/javascript">
+    // 1、获取事件源
+    var div = document.getElementById("box1");
+    // 2、绑定事件(有三种方法)
+    // 2-1直接绑定匿名的函数
+    // div.onclick = function () {
+    //     // 3、书写事件驱动程序
+    //     alert("我是弹出的内容");
+    // }
+
+    // 2-2先单独定义函数，再绑定
+    div.onclick = fn;
+    function fn() {
+        alert('绑定的方法二');
+        div.style.width = '200px';
+        div.style.height = '200px';
+        div.style.backgroundColor = "red";
+    }
+</script>
+
+</body>
+</html>

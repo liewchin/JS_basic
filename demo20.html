@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="pic/1.png" class="image-box" title="图片" alt="地铁一瞥" id="a1">
+
+    <script type="text/javascript">
+        var myNode = document.getElementsByTagName("img")[0];//如果没有[0]是指获取元素节点数组，有了[0]之后是指取数组中的第一个元素
+
+
+// 下面的两种获取元素的方法是一样的
+        console.log(myNode.src);
+        console.log(myNode.className);    //注意，是className，不是class
+        console.log(myNode.title);
+
+        console.log("------------");
+
+        console.log(myNode["src"]);
+        console.log(myNode["className"]); //注意，是className，不是class
+        console.log(myNode["title"]);
+    </script>
+</body>
+</html>

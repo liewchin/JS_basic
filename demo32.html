@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div {
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+            display: none;
+        }
+    </style>
+
+    <!-- <script>
+        //原生js
+        //原生 js 的入口函数。页面上所有内容加载完毕，才执行。
+        //不仅要等文本加载完毕，而且要等图片也要加载完毕，才执行函数。
+        window.onload = function () {
+            var btn = document.getElementsByTagName("button")[0];
+            var divArr = document.getElementsByTagName("div");
+
+            btn.onclick = function () {
+                for (var i = 0; i < divArr.length; i++) {
+                    divArr[i].style.display = "block";
+                    divArr[i].innerHTML = "test";
+                }
+            }
+        }
+    </script> -->
+
+    <script src="jquery-1.11.3.js"></script>
+    <script>
+
+        // jquery版
+        $(document).ready(function () {
+            // 获取元素
+            var jQbtn = $("button");
+            var jQdiv = $("div");
+
+            // 绑定事件
+            jQbtn.click(function () {
+                jQdiv.show(1000);
+                jQdiv.html("tomorrow!");
+                // 这里可以改成链式编程
+
+            });
+
+
+
+        });
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+    <button>显示五个div盒子和设置内容</button>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</body>
+
+</html>

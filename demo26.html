@@ -1,0 +1,40 @@
+<!-- 事件的绑定和事件对象Event -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 绑定事件有两种方式 -->
+    <button>点我</button>
+    <script>
+        var btn = document.getElementsByTagName("button")[0];
+        
+        // 这种绑定实践的方式，如果绑定多个，则后面的会覆盖掉前面的
+        btn.onclick = function () {
+            console.log("事件1");
+        }
+
+        btn.onclick = function () {
+            console.log('事件2');
+        
+        }
+        
+        btn.onclick = function () {
+            console.log('新事件3！')
+        }
+
+        
+
+    </script>
+
+
+
+
+</body>
+</html>

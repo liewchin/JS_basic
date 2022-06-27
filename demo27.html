@@ -1,0 +1,64 @@
+<!-- 事件的绑定和事件对象Event -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 绑定事件有两种方式 -->
+    <button>点我</button>
+    <script>
+        var btn = document.getElementsByTagName('button')[0];
+        // 方法2 DOM2的写法：addEventListener
+        // 这种情况下，两个绑定的事件都会被按顺序触发
+        btn.addEventListener('click', fn1);
+        btn.addEventListener('click', fn2);
+
+        function fn1() {
+            console.log('事件1');
+        }
+
+
+
+        function fn2() {
+            console.log('事件2');
+
+        }
+
+
+
+        // document.onclick = function (event) {
+        //     event = event || window.event; ////兼容性写法
+
+        //     console.log(event);
+        //     console.log(event.timeStamp);
+        //     console.log(event.bubbles);
+        //     console.log(event.button);
+        //     console.log(event.pageX);
+        //     console.log(event.pageY);
+        //     console.log(event.screenX);
+        //     console.log(event.screenY);
+        //     console.log(event.target);
+        //     console.log(event.type);
+        //     console.log(event.clientX);
+        //     console.log(event.clientY);
+        // }
+
+
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
